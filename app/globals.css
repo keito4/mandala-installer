@@ -1,0 +1,87 @@
+:root {
+  color-scheme: light dark;
+  --fg: #1a1a1a;
+  --bg: #ffffff;
+  --muted: #666;
+  --accent: #2f6f4f;
+  --border: #e2e2e2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg: #ededed;
+    --bg: #141414;
+    --muted: #9a9a9a;
+    --accent: #6fbf8f;
+    --border: #2e2e2e;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 3rem 1.5rem;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  line-height: 1.8;
+}
+
+main {
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.75rem;
+  line-height: 1.4;
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin: 2.5rem 0 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.lead {
+  color: var(--muted);
+}
+
+dl {
+  margin: 0;
+}
+
+dt {
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+dd {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1.75rem;
+  background: var(--accent);
+  color: var(--bg);
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cta:hover {
+  opacity: 0.88;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
