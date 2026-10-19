@@ -57,10 +57,25 @@ Redirect URI が1文字でもズレると認可が通らない。
 
 ### 4. 起動
 
+Node.js 20.9.0 以上を使用する（CI は Node.js 22）。
+
 ```bash
 npm install
 npm run dev
 ```
+
+### 変更時の検証
+
+```bash
+npm ci
+npm run typecheck
+npm test
+npm run build
+```
+
+CI でも同じ型検査・テスト・本番ビルドを実行する。
+テストは Notion へのトークン交換をモックし、callback の応答とリダイレクトを確認する。
+実際の認可画面やテンプレート複製は、下記の動作確認で別に確かめる。
 
 ## デプロイ
 
